@@ -1,0 +1,5 @@
+-- Q1: 부서별 평균 급여 (정답: Dev 6250, HR 4500, Sales 5100)
+-- TODO: SELECT dept.name, AVG(emp.salary) ...
+-- Q2: Sales 소속 직원 수
+-- Q3: salary 상위 2명
+-- Q4: Dev 부서 직원의 평균보다 급여 높은 직원

@@ -1,0 +1,4 @@
+-- 참고용 예시(정답은 직접 작성 후 비교)
+-- SELECT d.name, ROUND(AVG(e.salary),0) AS avg_sal
+-- FROM emp e JOIN dept d ON e.dept_id=d.dept_id
+-- GROUP BY d.name ORDER BY d.name;

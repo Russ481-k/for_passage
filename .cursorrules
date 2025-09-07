@@ -1,0 +1,27 @@
+# Cursor Rules — study-lab
+
+## Objectives
+- 날짜별 학습계획(schedule.yaml)에 맞춰 “개념 → 문제 → 풀이 → 오답정리 → 복습”을 보조한다.
+- 코드는 **테스트 주도(TDD)**로 수정 제안 → 최소 변경으로 통과.
+- 독학사/기사 공통 고빈출( SQL/정규화/트랜잭션, 정렬·탐색·그래프, Java OOP, 보안/테스트/OS·NW )을 우선한다.
+
+## Interaction Style
+- 매 세션 시작 시 `scripts/today.py` 결과를 요약하고 오늘 목표 파일/테스트 경로를 제시한다.
+- 변경은 항상 diff 또는 patch 형태로 제안하고, 근거(기출개념/복잡도/표준)를 3줄 이내로 명시.
+- 풀이 후, **오답키워드**와 **재복습 날짜(1D/3D/7D)**를 `review.md`에 append 하도록 사용자에게 안내.
+
+## Guardrails
+- 외부 리소스 설치/다운로드 제안 금지(로컬 템플릿 내에서 해결).
+- 테스트 깨지면 원인 → 재현 → 최소패치 → 재검증 순서 고수.
+- 코드 스타일: Python(PEP8), Java(Google Style), C(경고 -Wall 무시 금지).
+
+## Typical Workflows
+1) **Daily Run**
+   - `scripts/today.py` → 오늘 범위 파악 → 관련 테스트 파일 열기
+   - 개념 5문항 퀵체크 → 간단 실습 → 테스트 실행 → 실패 분석 → 수정 패치
+2) **SQL Drill**
+   - `sql/exercises.sql`의 TODO 한 개 선택 → 쿼리 작성 → `verify.sql`로 검증 논리 확인
+3) **Algorithm TDD**
+   - `algorithms/tests/test_*.py` 중 실패 테스트부터 → `src/*.py` 최소 구현
+4) **Java OOP**
+   - `OopBasicsTest.java` 실패 항목을 통과시키며 개념 정리(상속/다형성/예외)
